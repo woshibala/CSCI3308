@@ -1,4 +1,5 @@
-# This is the team project for csci3308 Software Development Methods and Tools
+# Team project for csci3308 
+# Software Development Methods and Tools
 ## Team member:
 Xiaojun Yin        Github:xiyi8580<br/>
 Yang Song          Github:woshibala<br/>
