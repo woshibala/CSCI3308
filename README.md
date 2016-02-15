@@ -16,7 +16,7 @@ Zanqing Feng       Github:zanking<br/><br/>
 <br/>
 ##Risks
 <br/>
-##Requirements: for the project
+##Requirements for the project
 >User Requirements
 <br/>
 >Functional Requirements
