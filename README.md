@@ -1,11 +1,11 @@
 # Team project for csci3308 
 # Software Development Methods and Tools
 ##Team member
+Yang Song          <br/><https://github.com/woshibala><br/>
 Xiaojun Yin        <br/><https://github.com/xiyi8580><br/>
-Yang Song          <br/>Github:woshibala<br/>
-Yu Qiu             <br/>Github:yuqi6824<br/>
-Zichao Yang        <br/>Github:ziya1666<br/>
-Zanqing Feng       <br/>Github:zanking<br/><br/>
+Yu Qiu             <br/><https://github.com/yuqi6824><br/>
+Zichao Yang        <br/><https://github.com/ziya1666><br/>
+Zanqing Feng       <br/><https://github.com/zanking><br/><br/>
 ##Title
 HEO website
 <br/>
