@@ -29,4 +29,11 @@ Some of our team member don't have experience in development of web project.
 <br/>
 >Non-Functional Requirements
 <br/>
+##Methodology
+Waterfall<br/>
+##Project Tracking software
+Trello https://trello.com/projectcsci33081
+<br/>
+##Project plan
+<br/>
 
