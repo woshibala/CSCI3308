@@ -20,7 +20,7 @@ All the people can use our website to help each other.
 Nowadays, people are more into the virtual world on the Internet, and are more likely to ignore the relationship among real people. We want to help all the members in our community to know each other, and give people a helping hand when they have difficulty in their daily life. 
 <br/>
 ##Risks
-Some of our team member don't have experience in development of web project.
+Some of our team member don't have experience in developing web project.
 <br/>
 ##Requirements for the project
 >User Requirements
