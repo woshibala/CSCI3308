@@ -24,6 +24,11 @@ Some of our team member don't have experience in developing web project.
 <br/>
 ##Requirements for the project
 >User Requirements
+1. As a user, I want to sign up so that I can have my account. <br/>
+2. As a user, I want to login so that I can operate acconut. <br/>
+3. As a user, I want to post my difficulties so that I can get help. <br/>
+4. As a user, I want to receive a order so that I can go and help someone. <br/>
+5. As a user, I want to know my difficulty is received so that I know someone is coming to help me. <br/>
 <br/>
 >Functional Requirements
 <br/>
