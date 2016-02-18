@@ -20,7 +20,7 @@ All the people can use our website to help each other.
 Nowadays, people are more into the virtual world on the Internet, and are more likely to ignore the relationship among real people. We want to help all the members in our community to know each other, and give people a helping hand when they have difficulty in their daily life. 
 <br/>
 ##Risks
-Some of our team member don't have experience in developing web project.
+Some of our team members don't have experience in developing web project.
 <br/>
 ##Requirements for the project
 >User Requirements<br/>
@@ -29,8 +29,13 @@ Some of our team member don't have experience in developing web project.
 3. As a user, I want to post my difficulties so that I can get help. <br/>
 4. As a user, I want to receive a order so that I can go and help someone. <br/>
 5. As a user, I want to know my difficulty is received so that I know someone is coming to help me. <br/>
+6. As a user, I want to browse all the difficulties posted so that I can find the person I can help.<br/>
+7. As a user, I want to get some reward by help others so that I have higer motivation.<br/>
+8. 
 <br/>
->Functional Requirements
+>Functional Requirements<br/>
+6. As a 
+7. As a 
 <br/>
 >Non-Functional Requirements
 <br/>
