@@ -39,9 +39,10 @@ Some of our team members don't have experience in developing web project.
 11. As a developer, I want to have a page to let someone describe their difficulties so that user can post.<br/>
 12. As a developer, I want to send email to inform user so that user can know their order have been received.<br/>
 13. As a developer, I want to build a credit accumulation system so that users can be rewarded.<br/>
-14. As a developer
+14. As a developer, I want to seperate difficulties into several sections so that users can search by sections.<br/>
 <br/>
->Non-Functional Requirements
+>Non-Functional Requirements<br/>
+15. As a developer, I want to 
 <br/>
 
 ##Methodology
