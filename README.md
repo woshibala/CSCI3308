@@ -34,15 +34,14 @@ Some of our team members don't have experience in developing web project.
 8. As a user, I want to choose from different sections of diffuculties so that I can help other more efficiently.<br/>
 <br/>
 >Functional Requirements<br/>
-9. As a developer, I want to design a sign up page so that user can sign up.<br/>
-10. As a developer, I want to design a login page so that user can login with registered information.<br/>
-11. As a developer, I want to have a page to let someone describe their difficulties so that user can post.<br/>
-12. As a developer, I want to send email to inform user so that user can know their order have been received.<br/>
-13. As a developer, I want to build a credit accumulation system so that users can be rewarded.<br/>
-14. As a developer, I want to seperate difficulties into several sections so that users can search by sections.<br/>
+9. As a developer, I want to design a sign up page so that user can sign up. (10hrs)<br/>
+10. As a developer, I want to design a login page so that user can login with registered information. (5 hrs)<br/>
+11. As a developer, I want to have a page to let someone describe their difficulties so that user can post. (12 hrs)<br/>
+12. As a developer, I want to send email to inform user so that user can know their order have been received. (10 hrs)<br/>
+13. As a developer, I want to build a credit accumulation system so that users can be rewarded. (15 hrs)<br/>
+14. As a developer
 <br/>
->Non-Functional Requirements<br/>
-15. As a developer, I want to 
+>Non-Functional Requirements
 <br/>
 
 ##Methodology
