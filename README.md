@@ -37,7 +37,9 @@ Some of our team members don't have experience in developing web project.
 9. As a developer, I want to design a sign up page so that user can sign up.<br/>
 10. As a developer, I want to design a login page so that user can login with registered information.<br/>
 11. As a developer, I want to have a page to let someone describe their difficulties so that user can post.<br/>
-12. 
+12. As a developer, I want sent email to inform user so that user can know their order have been received.<br/>
+13. As a developer, I want to credit accumulation system so that user can be reward.<br/>
+14. 
 <br/>
 >Non-Functional Requirements
 <br/>
