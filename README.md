@@ -23,7 +23,7 @@ Nowadays, people are more into the virtual world on the Internet, and are more l
 Some of our team member don't have experience in developing web project.
 <br/>
 ##Requirements for the project
->User Requirements
+>User Requirements<br/>
 1. As a user, I want to sign up so that I can have my account. <br/>
 2. As a user, I want to login so that I can operate acconut. <br/>
 3. As a user, I want to post my difficulties so that I can get help. <br/>
