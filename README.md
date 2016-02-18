@@ -31,11 +31,12 @@ Some of our team members don't have experience in developing web project.
 5. As a user, I want to know my difficulty is received so that I know someone is coming to help me. <br/>
 6. As a user, I want to browse all the difficulties posted so that I can find the person I can help.<br/>
 7. As a user, I want to get some reward by help others so that I have higer motivation.<br/>
-8. 
+8. As a user, I want to choose from different sections of diffuculties so that I can help other more efficiently.<br/>
 <br/>
 >Functional Requirements<br/>
-6. As a 
-7. As a 
+6. As a developer, I want to design a sign up page so that user can sign up.<br/>
+7. As a developer, I want to design a login page so that user can login with registered information.<br/>
+8. 
 <br/>
 >Non-Functional Requirements
 <br/>
