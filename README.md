@@ -41,7 +41,8 @@ Some of our team members don't have experience in developing web project.
 13. As a developer, I want to build a credit accumulation system so that users can be rewarded. (15 hrs)<br/>
 14. As a developer, I want to seperate difficulties into several sections so that users can search by sections. (8 hrs)<br/>
 <br/>
->Non-Functional Requirements
+>Non-Functional Requirements<br/>
+15.As a developer, I want to send email to users immediately after the order has been received so that users can have a better experience.<br/>
 <br/>
 
 ##Methodology
