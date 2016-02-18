@@ -50,6 +50,9 @@ Waterfall<br/>
 ##Project Tracking software
 Trello <br/> https://trello.com/projectcsci33081
 <br/>
-##Project plan
+##Project plan<br/>
+See plan in Trello
+<br/>
+https://trello.com/projectcsci33081
 <br/>
 
