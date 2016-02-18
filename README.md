@@ -39,7 +39,7 @@ Some of our team members don't have experience in developing web project.
 11. As a developer, I want to have a page to let someone describe their difficulties so that user can post. (12 hrs)<br/>
 12. As a developer, I want to send email to inform user so that user can know their order have been received. (10 hrs)<br/>
 13. As a developer, I want to build a credit accumulation system so that users can be rewarded. (15 hrs)<br/>
-14. As a developer
+14. As a developer, I want to seperate difficulties into several sections so that users can search by sections.<br/>
 <br/>
 >Non-Functional Requirements
 <br/>
