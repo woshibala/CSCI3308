@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from article.models import Article
+from article.models import Article,User
 from article.forms import SearchForm
+from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
 
@@ -38,7 +39,29 @@ def index(request):
 	return render_to_response("index.html")  
 
 def login(request):
-	return render_to_response("login.html")
+	return render(request,"login.html",{'state':True})
 
 def signup(request):
 	return render_to_response("signup.html")
+
+def signup_return(request):
+	uname = request.GET['username']
+	e_mail = request.GET['email']
+	pwd = request.GET['password']
+	uid = User.objects.count()
+	u = User(username=uname,email=e_mail,password=pwd,user_id=uid)
+	u.save()
+	content = {
+	  'username':uname
+	}
+	return render(request,'index_login.html',content)
+
+@csrf_protect
+def login_return(request):
+	u = User.objects.get(email=request.['email'])
+	if u.password == request.GET['password']:
+        request.session['uid'] = u.id
+        render(request,'index_login.html',{'username':u.username})
+    else:
+        return render(request,"login.html",False)
+	

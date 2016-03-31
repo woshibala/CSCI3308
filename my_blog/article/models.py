@@ -18,6 +18,7 @@ class User(models.Model):
 	username = models.CharField(max_length = 100,default='SOME STRING')
 	email = models.EmailField(max_length = 254)
 	password = models.CharField(max_length=100)
+	user_id = models.BigIntegerField(default = -1)
 
 
 	def __str__(self):
