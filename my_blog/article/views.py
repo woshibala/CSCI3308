@@ -39,7 +39,7 @@ def index(request):
 	return render_to_response("index.html")  
 
 def login(request):
-	return render(request,"login.html",{'state':True})
+	return render(request,"login.html",{'state': ""})
 
 def signup(request):
 	return render_to_response("signup.html")
@@ -58,10 +58,13 @@ def signup_return(request):
 
 @csrf_protect
 def login_return(request):
-	u = User.objects.get(email=request.['email'])
+	if User.objects.filter(email=request.GET['email']).count() == 0:
+		return render(request,"login.html",{'state':"User doesn't exist"})
+	u = User.objects.get(email=request.GET['email'])
 	if u.password == request.GET['password']:
-        request.session['uid'] = u.id
-        render(request,'index_login.html',{'username':u.username})
-    else:
-        return render(request,"login.html",False)
+		request.session['uid'] = u.id
+		return render(request,'index_login.html',{'username':u.username})
+	else:
+		content = '<span class="small_title"><i class="fa fa-check-square-o"></i>Top Navigation :</span>'
+		return render(request,"login.html",{'state':content})
 	
