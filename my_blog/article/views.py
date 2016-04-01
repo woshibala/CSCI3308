@@ -42,7 +42,7 @@ def login(request):
 	return render(request,"login.html",{'state': ""})
 
 def signup(request):
-	return render_to_response("signup.html")
+	return render(request,"signup.html",{'state':""})
 
 def add(request):
 	return render_to_response("add.html")
@@ -59,8 +59,8 @@ def signup_return(request):
 	 	 	'username':uname
 		}
 		return render(request,'index_login.html',content)
-	#else:
-		#return render(request,'signup.html,{'state': ""})
+	else:#every email can only signup once
+		return render(request,"signup.html",{'state': "User already exist!"})
 
 @csrf_protect
 def login_return(request):
