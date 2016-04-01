@@ -44,6 +44,9 @@ def login(request):
 def signup(request):
 	return render_to_response("signup.html")
 
+def add(request):
+	return render_to_response("add.html")
+
 def signup_return(request):
 	uname = request.GET['username']
 	e_mail = request.GET['email']
@@ -60,11 +63,14 @@ def signup_return(request):
 def login_return(request):
 	if User.objects.filter(email=request.GET['email']).count() == 0:
 		return render(request,"login.html",{'state':"User doesn't exist"})
-	u = User.objects.get(email=request.GET['email'])
-	if u.password == request.GET['password']:
-		request.session['uid'] = u.id
-		return render(request,'index_login.html',{'username':u.username})
+	if u = User.objects.get(email=request.GET['email']).count() == 1:
+		if u.password == request.GET['password']:
+			request.session['uid'] = u.id
+			return render(request,'index_login.html',{'username':u.username})
+		else:
+			content = '<span class="small_title"><i class="fa fa-check-square-o"></i>Top Navigation :</span>'
+			return render(request,"login.html",{'state':content})
 	else:
-		content = '<span class="small_title"><i class="fa fa-check-square-o"></i>Top Navigation :</span>'
-		return render(request,"login.html",{'state':content})
-	
+		return HttpResponse("More than one user found! Error")
+
+
