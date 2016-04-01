@@ -462,7 +462,7 @@ nav ul.toplinks {
 nav #menu {
     overflow: hidden;
     max-height: 0;
-    clear: right;
+    clear: left;
 }
 
 
@@ -2202,7 +2202,8 @@ Status API Training Shop Blog About
      
     </ul>
     <div class="docs-content">
-    {{state}}
+    <span class="small_title">{{state}}</span>
+    
    
       <form  action="../login_return/" method="get">{% csrf_token %}
             <p>           

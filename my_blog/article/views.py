@@ -50,27 +50,33 @@ def add(request):
 def signup_return(request):
 	uname = request.GET['username']
 	e_mail = request.GET['email']
-	pwd = request.GET['password']
-	uid = User.objects.count()
-	u = User(username=uname,email=e_mail,password=pwd,user_id=uid)
-	u.save()
-	content = {
-	  'username':uname
-	}
-	return render(request,'index_login.html',content)
+	if User.objects.filter(email=request.GET['email']).count() == 0:
+		pwd = request.GET['password']
+		uid = User.objects.count()
+		u = User(username=uname,email=e_mail,password=pwd,user_id=uid)
+		u.save()
+		content = {
+	 	 	'username':uname
+		}
+		return render(request,'index_login.html',content)
+	#else:
+		#return render(request,'signup.html,{'state': ""})
 
 @csrf_protect
 def login_return(request):
 	if User.objects.filter(email=request.GET['email']).count() == 0:
-		return render(request,"login.html",{'state':"User doesn't exist"})
-	if u = User.objects.get(email=request.GET['email']).count() == 1:
+		return render(request,"login.html",{'state':"User doesn't exist!"})
+	if User.objects.filter(email=request.GET['email']).count() == 1:
+		u = User.objects.get(email=request.GET['email'])	
 		if u.password == request.GET['password']:
+			#if info correct go to index
 			request.session['uid'] = u.id
 			return render(request,'index_login.html',{'username':u.username})
 		else:
-			content = '<span class="small_title"><i class="fa fa-check-square-o"></i>Top Navigation :</span>'
+			#if password incorrect return error message
+			content = 'Please enter the correct password!'
 			return render(request,"login.html",{'state':content})
-	else:
-		return HttpResponse("More than one user found! Error")
+	else:#if find more than one user
+		return HttpResponse("More than one user found! Error!")
 
 
