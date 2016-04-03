@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
+from django.views.decorators.csrf import csrf_protect
 from article.models import Article,User
 from article.forms import SearchForm
-from django.views.decorators.csrf import csrf_protect
+import datetime
 # Create your views here.
 
 
@@ -46,6 +47,25 @@ def signup(request):
 
 def add(request):
 	return render_to_response("add.html")
+
+def add_return(request):
+	tit = request.GET['title']
+	cate = request.GET['category']
+	cont = request.GET['content']
+	#need cookie to identify user
+	#dt = datetime.datetime.now() default is now!
+	a = Article(title=tit,category=cate,content=cont)
+	a.save()
+	content = {
+	  'title':tit,
+	  'category':cate,
+	  'datetime':datetime.datetime.now(),
+	  'content': cont,
+	  #still need to add username here
+	}
+	return render(request,"add_success.html",content)
+
+
 
 def signup_return(request):
 	uname = request.GET['username']

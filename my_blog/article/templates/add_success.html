@@ -2201,22 +2201,18 @@ Status API Training Shop Blog About
 <section>
   <div class="container">
     <ul class="docs-nav" id="menu-left">
-      <li><strong>Add Your Difficulty</strong></li>
+      <li><strong>Add difficulty successfully!</strong></li>
      
     </ul>
     <div class="docs-content">
       <form  action="../add_return/" id = "aaa" method="get">{% csrf_token %}
-            <p>           
-            <input type="text" name="title" placeholder="title" class="button-rounded" />
-            </p>
-              
-            <input type="text" name="category" placeholder="category" class="button-rounded" />
-
-            <p>
-            <input type="text" name="content" placeholder="Please discribe your difficulty here!" class="content button-rounded" />
-            <p>&nbsp;</p>
-            <input type="submit" name="submit" id="submit" value="Submit"class="button button-glow button-border button-rounded button-primary" />
-            </p>
+      <p>
+      <h3 id="Theme_Info">{{title}}</h3>
+      <p> Created: {{datetime}}<br/> </p>
+      <span class="small_title"><i class="fa fa-check-square-o"></i>User: someuser</span>
+      <p>{{content}}</p>
+      <input type="submit" name="submit" id="submit" value="Back to Home"class="button button-glow button-border button-rounded button-primary" />
+      </p>
      </form>      
      
 </section>

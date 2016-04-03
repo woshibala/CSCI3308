@@ -7,7 +7,7 @@ from django.utils import timezone
 class Article(models.Model):
 	title = models.CharField(max_length = 100)
 	category = models.CharField(max_length = 50,blank=True)
-	data_time = models.DateTimeField(default = timezone.now())
+	date_time = models.DateTimeField(default = timezone.now())
 	content = models.TextField(blank =True,null=True)
 	username = models.CharField(max_length = 100,default='SOME STRING')
 
