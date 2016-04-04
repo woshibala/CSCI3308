@@ -2194,28 +2194,16 @@ Status API Training Shop Blog About
     </ul>
     <div class="docs-content">
       <h2> Help Information</h2>
-
+      {% for post in post_list %}
       <p>
-      <h3 id="Theme_Info">First Help title</h3>
-      <p>	Created: 30/07/2015<br/> </p>
-      <span class="small_title"><i class="fa fa-check-square-o"></i>User: someuser</span>
-      <p>Vienna Lite 2 is a Blogger template with Responsive layout and suited for all blog. It's design with simple color combination, clean and modern look, SEO Optimized, and has been built by using some of the most popular current design trends.</p>
+      <h3 id="Theme_Info">{{post.title}}</h3>
+      <p> Created: {{post.date_time}}<br/> </p>
+      <span class="small_title"><i class="fa fa-check-square-o"></i>User: {{post.user}}</span>
+      <p>{{post.content}}</p>
       <input type="submit" name="submit" id="submit" value=" I WANT TO HELP"class="button button-glow button-border button-rounded button-primary" />
       </p>
-
-      <h3 id="Theme_Info">Second Help title</h3>
-      <p> Created: 30/07/2015<br/> </p>
-      <span class="small_title"><i class="fa fa-check-square-o"></i>User: someuser</span>
-      <p>Vienna Lite 2 is a Blogger template with Responsive layout and suited for all blog. It's design with simple color combination, clean and modern look, SEO Optimized, and has been built by using some of the most popular current design trends.</p>
-      <input type="submit" name="submit" id="submit" value=" I WANT TO HELP"class="button button-glow button-border button-rounded button-primary" />
-
-
-      <h3 id="Theme_Info">Third Help title</h3>
-      <p> Created: 30/07/2015<br/> </p>
-      <span class="small_title"><i class="fa fa-check-square-o"></i>User: someuser</span>
-      <p>Vienna Lite 2 is a Blogger template with Responsive layout and suited for all blog. It's design with simple color combination, clean and modern look, SEO Optimized, and has been built by using some of the most popular current design trends.</p>
-      <input type="submit" name="submit" id="submit" value=" I WANT TO HELP"class="button button-glow button-border button-rounded button-primary" />
-    
+      {% endfor %}
+      
 
       <hr>
       <h2> About Help Each Other</h2>

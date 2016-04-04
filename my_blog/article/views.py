@@ -37,7 +37,8 @@ def search_return(request):
 	return render(request,"search_return.html",content)
 
 def index(request):
-	return render_to_response("index.html")  
+	post_list = Article.objects.all()   
+	return render(request,"index.html",{"post_list":post_list})
 
 def login(request):
 	return render(request,"login.html",{'state': ""})
@@ -91,7 +92,8 @@ def login_return(request):
 		if u.password == request.GET['password']:
 			#if info correct go to index
 			request.session['uid'] = u.id
-			return render(request,'index_login.html',{'username':u.username})
+			post_list = Article.objects.all()
+			return render(request,'index_login.html',{'username':u.username,"post_list":post_list})
 		else:
 			#if password incorrect return error message
 			content = 'Please enter the correct password!'
