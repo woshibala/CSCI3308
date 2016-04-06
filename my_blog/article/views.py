@@ -47,21 +47,23 @@ def signup(request):
 	return render(request,"signup.html",{'state':""})
 
 def add(request):
-	return render_to_response("add.html")
+	return render(request,"add.html")
 
 def add_return(request):
+	username = request.session['username']
 	tit = request.GET['title']
 	cate = request.GET['category']
 	cont = request.GET['content']
 	#need cookie to identify user
 	#dt = datetime.datetime.now() default is now!
-	a = Article(title=tit,category=cate,content=cont)
+	a = Article(title=tit,category=cate,content=cont,username=username)
 	a.save()
 	content = {
 	  'title':tit,
 	  'category':cate,
 	  'datetime':datetime.datetime.now(),
 	  'content': cont,
+	  'username':username,
 	  #still need to add username here
 	}
 	return render(request,"add_success.html",content)
@@ -83,6 +85,11 @@ def signup_return(request):
 	else:#every email can only signup once
 		return render(request,"signup.html",{'state': "User already exist!"})
 
+def back_home(request):
+	post_list = Article.objects.all()
+	return render(request,'index_login.html',{"post_list":post_list})
+
+
 @csrf_protect
 def login_return(request):
 	if User.objects.filter(email=request.GET['email']).count() == 0:
@@ -93,7 +100,8 @@ def login_return(request):
 			#if info correct go to index
 			request.session['uid'] = u.id
 			post_list = Article.objects.all()
-			return render(request,'index_login.html',{'username':u.username,"post_list":post_list})
+			request.session['username'] = u.username
+			return render(request,'index_login.html',{"post_list":post_list})
 		else:
 			#if password incorrect return error message
 			content = 'Please enter the correct password!'
