@@ -8,4 +8,9 @@ Zanqing Feng       <br/><https://github.com/zanking><br/><br/>
 ##Title
 HEO website
 <br/>
+##Vision
+HEO(Help Each Other) is a website where people can post their small diffculties, and any stranger can come to help them out.<br/>
+For instance, old people who live alone can ask someone to help change lamp or move furniture via our website.<br/>
+Disabled people can ask someone to get grocery for him/her by posting in our website.<br/>
+
 
