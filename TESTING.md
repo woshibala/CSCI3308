@@ -57,12 +57,31 @@ Flow of events:<br/>
 Actor Action | System Response | Comments
 ------------ | --------------- | ---------
 1. Click login | Redirect to login page|
-2. Enter username,password|   |
+2. Enter email address and password|   |
 3. Click "Login" button| go to index page or error message | 
 4. In index page | Show hello "username" |
 
 Test pass?: PASS <br/><br/><br/>
 
+Use Case ID |  UC-01
+------------ | -------------
+Use Case Name |  Add difficulties.
+Description | User can post difficulties.
+User | Registered users.
+Pre-conditions | User already login.
+Post-conditions | Difficulties listed in index page.
+Frequency of use | Everytime need add difficulty. 
+
+Flow of events:<br/>
+
+Actor Action | System Response | Comments
+------------ | --------------- | ---------
+1. Click "Need help?" | Redirect to add page|
+2. Enter title category and content|   |
+3. Click "Add" button| Redirect to success page, show information of post| Add to database
+4. Click "Back to home" button | Redirect to index page  |
+
+Test pass?: PASS <br/><br/><br/>
 
 
 
