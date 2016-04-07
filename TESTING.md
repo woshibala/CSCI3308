@@ -27,9 +27,9 @@ New user sign up<br/>
 >Description: 
 New users need to sign up and provide some information for further login. <br/>
 >User: New users<br/>
->Pre-conditions:<br/>
+>Pre-conditions:
 Using local server port 8000, go to 127.0.0.1:8000/heo/index/<br/>
->Post-conditions:<br/>
+>Post-conditions:
 Sign up and automatically login, user information stored in database.<br/>
 >Frequency of user: Every new user. <br/>
 >Flow of Events:<br/>
