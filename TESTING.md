@@ -40,7 +40,31 @@ Actor Action | System Response | Comments
 3. Click "Sign up" button| go to index page | Automactically login
 4. In index page | Show hello "username" |
 
-Test Pass: PASS <br/>
+Test Pass?: PASS <br/><br/><br/>
+
+
+Use Case ID |  UC-02
+------------ | -------------
+Use Case Name |  User login.
+Description | User need login to get access to some pages
+User | Registered users.
+Pre-conditions | Already registered in Sign up page.
+Post-conditions | Login in, go to index page.
+Frequency of use | Everytime using the website. 
+
+Flow of events:<br/>
+
+Actor Action | System Response | Comments
+------------ | --------------- | ---------
+1. Click login | Redirect to login page|
+2. Enter username,password|   |
+3. Click "Login" button| go to index page or error message | 
+4. In index page | Show hello "username" |
+
+Test pass?: PASS <br/><br/><br/>
+
+
+
 
 
 
