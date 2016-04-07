@@ -21,10 +21,20 @@ We mainly test the database models in this project by creating some instances of
 ![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test2.png "Optional Title")<br/>
 
 ##User Acceptance Tests
->####Use Case ID: 
-UC-01<br/>
->####Use Case Name: 
+>#####Use Case ID: UC-01<br/>
+>Use Case Name:
 New user sign up<br/>
+>Description: 
+New users need to sign up and provide some information for further login. <br/>
+>User: New users<br/>
+>Pre-conditions:<br/>
+Using local server port 8000, go to 127.0.0.1:8000/heo/index/<br/>
+>Post-conditions:<br/>
+Sign up and automatically login, user information stored in database.<br/>
+>Frequency of user: Every new user. <br/>
+>Flow of Events:<br/>
+>
+
 
 
 
