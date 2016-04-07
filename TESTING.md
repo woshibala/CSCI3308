@@ -35,7 +35,14 @@ Flow of events:<br/>
 
 Actor Action | System Response | Comments
 ------------ | --------------- | ---------
-Click sign up in index page| Redirect to sign up page|
+1. Click sign up in index page| Redirect to sign up page|
+2. Enter username,email and password|   |
+3. Click "Sign up" button| go to index page | Automactically login
+4. In index page | Show hello "username" |
+
+Test Pass: PASS <br/>
+
+
 
 
 
