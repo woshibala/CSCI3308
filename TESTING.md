@@ -42,6 +42,10 @@ Actor Action | System Response | Comments
 
 Test Pass?: PASS <br/><br/><br/>
 
+![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test3.png "Optional Title")<br/>
+![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test6.png "Optional Title")<br/>
+
+
 
 Use Case ID |  UC-02
 ------------ | -------------
@@ -63,6 +67,9 @@ Actor Action | System Response | Comments
 
 Test pass?: PASS <br/><br/><br/>
 
+![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test5.png "Optional Title")<br/>
+
+
 Use Case ID |  UC-03
 ------------ | -------------
 Use Case Name |  Add difficulties.
@@ -83,6 +90,7 @@ Actor Action | System Response | Comments
 
 Test pass?: PASS <br/><br/><br/>
 
+![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test4.png "Optional Title")<br/>
 
 
 
