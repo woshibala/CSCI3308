@@ -20,5 +20,11 @@ We mainly test the database models in this project by creating some instances of
 ![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test1.png "Optional Title")<br/>
 ![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test2.png "Optional Title")<br/>
 
+##User Acceptance Tests
+>####Use Case ID: 
+UC-01<br/>
+>####Use Case Name: 
+New user sign up<br/>
+
 
 
