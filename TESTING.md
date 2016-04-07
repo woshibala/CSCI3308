@@ -63,7 +63,7 @@ Actor Action | System Response | Comments
 
 Test pass?: PASS <br/><br/><br/>
 
-Use Case ID |  UC-01
+Use Case ID |  UC-03
 ------------ | -------------
 Use Case Name |  Add difficulties.
 Description | User can post difficulties.
@@ -78,7 +78,7 @@ Actor Action | System Response | Comments
 ------------ | --------------- | ---------
 1. Click "Need help?" | Redirect to add page|
 2. Enter title category and content|   |
-3. Click "Add" button| Redirect to success page, show information of post| Add to database
+3. Click "Add" button| Redirect to success page, show information of post| Create instance in database
 4. Click "Back to home" button | Redirect to index page  |
 
 Test pass?: PASS <br/><br/><br/>
