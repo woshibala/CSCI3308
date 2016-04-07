@@ -28,12 +28,15 @@ New user sign up<br/>
 New users need to sign up and provide some information for further login. <br/>
 >User: New users<br/>
 >Pre-conditions:
-Using local server port 8000, go to 127.0.0.1:8000/heo/index/<br/>
+Using local server port 8000, go to "127.0.0.1:8000/heo/index/".<br/>
 >Post-conditions:
 Sign up and automatically login, user information stored in database.<br/>
 >Frequency of user: Every new user. <br/>
 >Flow of Events:<br/>
->
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 
