@@ -42,7 +42,7 @@ Actor Action | System Response | Comments
 
 Test Pass?: PASS <br/><br/><br/>
 
-![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test3.png "Optional Title")<br/>
+
 ![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test6.png "Optional Title")<br/>
 
 
