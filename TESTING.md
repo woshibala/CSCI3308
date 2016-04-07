@@ -16,7 +16,9 @@ Disabled people can ask someone to get grocery for him/her by posting in our web
 >###Explanation<br/>
 We use a Python standard library module: TestCase.unittest to do the automated tests.<br/>
 We mainly test the database models in this project by creating some instances of User and Article and checking checking the value in the instances.<br/>
->Screenshot<br/>
-![](team-project-for-csci3308/test1.png?raw=true "Optional Title")
+>###Screenshot<br/>
+![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test1.png "Optional Title")<br/>
+![](https://raw.github.com/woshibala/team-project-for-csci3308/SY/test2.png "Optional Title")<br/>
+
 
 
