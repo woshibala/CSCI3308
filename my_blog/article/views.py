@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_protect
 from article.models import Article,User
-from article.forms import SearchForm
+from article.forms import addForm
 import datetime
 # Create your views here.
 
@@ -50,13 +50,14 @@ def add(request):
 	return render(request,"add.html")
 
 def add_return(request):
+	img = request.FILES["docfile"]
 	username = request.session['username']
-	tit = request.GET['title']
-	cate = request.GET['category']
-	cont = request.GET['content']
+	tit = request.POST['title']
+	cate = request.POST['category']
+	cont = request.POST['content']
 	#need cookie to identify user
-	#dt = datetime.datetime.now() default is now!
-	a = Article(title=tit,category=cate,content=cont,username=username)
+	#dt = datetime.datetime.now() default is now!'''
+	a = Article(title=tit,category=cate,content=cont,username=username,image=img)
 	a.save()
 	content = {
 	  'title':tit,
@@ -64,6 +65,8 @@ def add_return(request):
 	  'datetime':datetime.datetime.now(),
 	  'content': cont,
 	  'username':username,
+	  'url':a.image.url,
+
 	  #still need to add username here
 	}
 	return render(request,"add_success.html",content)

@@ -2209,6 +2209,10 @@ Status API Training Shop Blog About
       <p>
       <h3 id="Theme_Info">{{title}}</h3>
       <p> Created: {{datetime}}<br/> </p>
+      {% load staticfiles %}
+      /{{url}}
+      <img src="/photos/bert.jpg" alt="image"/>
+
       <span class="small_title"><i class="fa fa-check-square-o"></i>User: {{request.session.username}}</span>
       <p>{{content}}</p>
       <a href = "../back_home/" class="button button-glow button-border button-rounded button-primary" >back to home</a>

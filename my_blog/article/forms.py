@@ -1,4 +1,5 @@
 from django import forms
 
-class SearchForm(forms.Form):  
-    keyword = forms.CharField()  
+class addForm(forms.Form):
+
+    image = forms.ImageField(required=False)  
