@@ -55,7 +55,7 @@ def add_return(request):
 	tit = request.POST['title']
 	cate = request.POST['category']
 	cont = request.POST['content']
-	#need cookie to identify user
+	#need cookie to identify 
 	#dt = datetime.datetime.now() default is now!'''
 	a = Article(title=tit,category=cate,content=cont,username=username,image=img)
 	a.save()
