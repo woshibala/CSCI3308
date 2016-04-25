@@ -36,21 +36,7 @@ body{
     padding: 6px 0 6px 40px;
 }
 
-.menu a {
-    
-    color:#c5d6db;
-    text-decoration: none;
-    font-size:14px;
-    font-family: "Arial Narrow", "Myriad Pro";
-    
-    
-}
 
-.menu a:hover{
-    
-    color:#ecf2f3;
-    
-}
 
 aside {
     float:left;
