@@ -120,7 +120,10 @@ def login_return(request):
 		return HttpResponse("More than one user found! Error!")
 
 def logout(request):
-	ret = request.session.get(1)
-	return HttpResponse(ret)
+	username = request.COOKIES['name']
+	post_list = Article.objects.all()   
+	response = render(request,"index.html",{"post_list":post_list})
+	response.delete_cookie('name')
+	return response
 
 
