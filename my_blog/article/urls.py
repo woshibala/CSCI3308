@@ -11,5 +11,6 @@ urlpatterns = [
 	url(r'^add/$',views.add,name='add'),
 	url(r'^add_return/$',views.add_return,name='add_return'),
 	url(r'^back_home/$',views.back_home,name='back_home'),
-	
+	url(r'^logout/$',views.logout,name='logout'),
+
 ]

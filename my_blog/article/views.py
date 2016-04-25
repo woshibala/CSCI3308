@@ -81,10 +81,9 @@ def signup_return(request):
 		uid = User.objects.count()
 		u = User(username=uname,email=e_mail,password=pwd,user_id=uid)
 		u.save()
-		content = {
-	 	 	'username':uname
-		}
-		return render(request,'index_login.html',content)
+		post_list = Article.objects.all()
+		request.session['username'] = uname
+		return render(request,'index_login.html',{"post_list":post_list})
 	else:#every email can only signup once
 		return render(request,"signup.html",{'state': "User already exist!"})
 
@@ -93,7 +92,7 @@ def back_home(request):
 	return render(request,'index_login.html',{"post_list":post_list})
 
 
-@csrf_protect
+
 def login_return(request):
 	if User.objects.filter(email=request.GET['email']).count() == 0:
 		return render(request,"login.html",{'state':"User doesn't exist!"})
@@ -101,15 +100,21 @@ def login_return(request):
 		u = User.objects.get(email=request.GET['email'])	
 		if u.password == request.GET['password']:
 			#if info correct go to index
-			request.session['uid'] = u.id
+			request.session[u.id] = True
 			post_list = Article.objects.all()
 			request.session['username'] = u.username
-			return render(request,'index_login.html',{"post_list":post_list})
+			response = render(request,'index_login.html',{"post_list":post_list})
+			response.set_cookie('cook', 'testtest')
+			return response
 		else:
 			#if password incorrect return error message
 			content = 'Please enter the correct password!'
 			return render(request,"login.html",{'state':content})
 	else:#if find more than one user
 		return HttpResponse("More than one user found! Error!")
+
+def logout(request):
+	ret = request.session.get(1)
+	return HttpResponse(ret)
 
 
