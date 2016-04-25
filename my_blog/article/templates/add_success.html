@@ -2187,7 +2187,7 @@ Status API Training Shop Blog About
     <div id="menu">
       <ul class="toplinks">
         <li><a href="../index" target='_self'>Home</a></li>
-        <li><a>Hello, {{username}}</a></li>
+        <li><a>Hello, {{username}}!</a></li>
         <li><a href="https://github.com/woshibala/team-project-for-csci3308" target='_blank'>About us</a></li>
       </ul>
     </div>
@@ -2212,7 +2212,7 @@ Status API Training Shop Blog About
       {% load staticfiles %}
       <img src="/{{url}}" alt="image"/>
       
-      <p><span class="small_title"><i class="fa fa-check-square-o"></i>User: {{request.session.username}}</span></p>
+      <p><span class="small_title"><i class="fa fa-check-square-o"></i>User: {{username}}</span></p>
       <p>{{content}}</p>
       <a href = "../back_home/" class="button button-glow button-border button-rounded button-primary" >back to home</a>
       </p>

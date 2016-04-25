@@ -2165,8 +2165,8 @@ Status API Training Shop Blog About
   <div class="container">
     <div id="menu">
       <ul class="toplinks">
-        <li align="right"><a>Hello? {{request.session.username}}!</a></li>
-        <li align="right"><a href="../logout">Logout</a></li>
+        <li align="right"><a>Hello, {{username}}!</a></li>
+        <!--li align="right"><a href="../logout">Logout</a></li-->
         <li><a href="https://github.com/woshibala/team-project-for-csci3308" target='_blank'>About us</a></li>
         <li align="right"><a href="../add" target='_self' align="right">Need Help?</a></li>
       </ul>
@@ -2180,20 +2180,13 @@ Status API Training Shop Blog About
 </header>
 <section>
   <div class="container">
-    <ul class="docs-nav" id="menu-left">
-      <li><strong>Getting Started</strong></li>
-      <li><a href="#Theme_Info" class=" ">Theme Info</a></li>
-    <li><a href="#Features" class=" ">Features</a></li>
-      <li><a href="#Installation" class=" ">Installation</a></li>
-      <li class="separator"></li>
-      <li><strong>Customize Theme</strong></li>
-      <li><a href="#ShortCodes" class=" ">ShortCodes</a></li>
-      <li><a href="#Fixedd" class=" ">Fixed</a></li>     
-      <li class="separator"></li>
-
+   <ul class="docs-nav" id="menu-left">
+      <li><strong>Welcome to HEO</strong></li>
+      <li><a href="#Theme_Info" class=" ">HEO is a platform where everyone can get help and help others. </a></li>
+    
     </ul>
     <div class="docs-content">
-      <h2> Help Information {{request.COOKIES.cook}}</h2>
+      <h2> Help Information </h2>
       <br/><br/>
       {% for post in post_list %}
       <p>

@@ -47,14 +47,17 @@ def signup(request):
 	return render(request,"signup.html",{'state':""})
 
 def add(request):
-	return render(request,"add.html")
+	username = request.COOKIES['name']
+	response = render(request,"add.html",{'username':username})
+	return response
 
 def add_return(request):
 	img = request.FILES["docfile"]
-	username = request.session['username']
+	username = request.COOKIES['name']
 	tit = request.POST['title']
 	cate = request.POST['category']
 	cont = request.POST['content']
+
 	#need cookie to identify 
 	#dt = datetime.datetime.now() default is now!'''
 	a = Article(title=tit,category=cate,content=cont,username=username,image=img)
@@ -82,14 +85,17 @@ def signup_return(request):
 		u = User(username=uname,email=e_mail,password=pwd,user_id=uid)
 		u.save()
 		post_list = Article.objects.all()
-		request.session['username'] = uname
-		return render(request,'index_login.html',{"post_list":post_list})
+		request.session[uid] = True
+		response = render(request,'index_login.html',{"post_list":post_list,'username':uname})
+		response.set_cookie('name',uname)
+		return response
 	else:#every email can only signup once
 		return render(request,"signup.html",{'state': "User already exist!"})
 
 def back_home(request):
+	username = request.COOKIES['name']
 	post_list = Article.objects.all()
-	return render(request,'index_login.html',{"post_list":post_list})
+	return render(request,'index_login.html',{"post_list":post_list,'username':username})
 
 
 
@@ -102,9 +108,9 @@ def login_return(request):
 			#if info correct go to index
 			request.session[u.id] = True
 			post_list = Article.objects.all()
-			request.session['username'] = u.username
-			response = render(request,'index_login.html',{"post_list":post_list})
-			response.set_cookie('cook', 'testtest')
+			request.session[u.id] = True
+			response = render(request,'index_login.html',{"post_list":post_list,'username':u.username})
+			response.set_cookie('name',u.username)
 			return response
 		else:
 			#if password incorrect return error message
