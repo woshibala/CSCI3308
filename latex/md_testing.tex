@@ -1,0 +1,119 @@
+\subsection*{Team member}
+
+Yang Song ~\newline
+\href{https://github.com/woshibala}{\tt https\+://github.\+com/woshibala}~\newline
+ Xiaojun Yin ~\newline
+\href{https://github.com/xiyi8580}{\tt https\+://github.\+com/xiyi8580}~\newline
+ Yu Qiu ~\newline
+\href{https://github.com/yuqi6824}{\tt https\+://github.\+com/yuqi6824}~\newline
+ Zichao Yang ~\newline
+\href{https://github.com/ziya1666}{\tt https\+://github.\+com/ziya1666}~\newline
+ Zanqing Feng ~\newline
+\href{https://github.com/zanking}{\tt https\+://github.\+com/zanking}~\newline
+~\newline
+ \subsection*{Title}
+
+H\+E\+O website ~\newline
+ \subsection*{Vision}
+
+H\+E\+O(\+Help Each Other) is a website where people can post their small diffculties, and any stranger can come to help them out.~\newline
+ For instance, old people who live alone can ask someone to help change lamp or move furniture via our website.~\newline
+ Disabled people can ask someone to get grocery for him/her by posting in our website.~\newline
+ \subsection*{Automated Tests}
+
+$>$\#\#\#\+Explanation~\newline
+ We use a Python standard library module\+: Test\+Case.\+unittest to do the automated tests.~\newline
+ We mainly test the database models in this project by creating some instances of User and Article and checking checking the value in the instances.~\newline
+ $>$\#\#\#\+Screenshot~\newline
+ ~\newline
+ ~\newline
+
+
+\subsection*{User Acceptance Tests}
+
+\begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Use Case I\+D }&{\bf U\+C-\/01  }\\\cline{1-2}
+Use Case Name &User sign up. \\\cline{1-2}
+Description &New users need to sign up and provide some information for further login. \\\cline{1-2}
+User &New users. \\\cline{1-2}
+Pre-\/conditions &Using local server port 8000, go to \char`\"{}127.\+0.\+0.\+1\+:8000/heo/index/\char`\"{}. \\\cline{1-2}
+Post-\/conditions &Sign up and automatically login, user information stored in database. \\\cline{1-2}
+Frequency of use &Every new user. \\\cline{1-2}
+\end{TabularC}
+Flow of events\+:~\newline
+
+
+Actor Action $\vert$ System Response $\vert$ Comments -\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/---
+\begin{DoxyEnumerate}
+\item Click sign up in index page$\vert$ Redirect to sign up page$\vert$
+\item Enter username,email and password$\vert$ $\vert$
+\item Click \char`\"{}\+Sign up\char`\"{} button$\vert$ go to index page $\vert$ Automactically login
+\item In index page $\vert$ Show hello \char`\"{}username\char`\"{} $\vert$
+\end{DoxyEnumerate}
+
+Test Pass?\+: P\+A\+S\+S ~\newline
+~\newline
+~\newline
+
+
+~\newline
+
+
+\begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Use Case I\+D }&{\bf U\+C-\/02  }\\\cline{1-2}
+Use Case Name &User login. \\\cline{1-2}
+Description &User need login to get access to some pages \\\cline{1-2}
+User &Registered users. \\\cline{1-2}
+Pre-\/conditions &Already registered in Sign up page. \\\cline{1-2}
+Post-\/conditions &Login in, go to index page. \\\cline{1-2}
+Frequency of use &Everytime using the website. \\\cline{1-2}
+\end{TabularC}
+Flow of events\+:~\newline
+
+
+Actor Action $\vert$ System Response $\vert$ Comments -\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/---
+\begin{DoxyEnumerate}
+\item Click login $\vert$ Redirect to login page$\vert$
+\item Enter email address and password$\vert$ $\vert$
+\item Click \char`\"{}\+Login\char`\"{} button$\vert$ go to index page or error message $\vert$
+\item In index page $\vert$ Show hello \char`\"{}username\char`\"{} $\vert$
+\end{DoxyEnumerate}
+
+Test pass?\+: P\+A\+S\+S ~\newline
+~\newline
+~\newline
+
+
+~\newline
+
+
+\begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Use Case I\+D }&{\bf U\+C-\/03  }\\\cline{1-2}
+Use Case Name &Add difficulties. \\\cline{1-2}
+Description &User can post difficulties. \\\cline{1-2}
+User &Registered users. \\\cline{1-2}
+Pre-\/conditions &User already login. \\\cline{1-2}
+Post-\/conditions &Difficulties listed in index page. \\\cline{1-2}
+Frequency of use &Everytime need add difficulty. \\\cline{1-2}
+\end{TabularC}
+Flow of events\+:~\newline
+
+
+Actor Action $\vert$ System Response $\vert$ Comments -\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/---
+\begin{DoxyEnumerate}
+\item Click \char`\"{}\+Need help?\char`\"{} $\vert$ Redirect to add page$\vert$
+\item Enter title category and content$\vert$ $\vert$
+\item Click \char`\"{}\+Add\char`\"{} button$\vert$ Redirect to success page, show information of post$\vert$ Create instance in database
+\item Click \char`\"{}\+Back to home\char`\"{} button $\vert$ Redirect to index page $\vert$
+\end{DoxyEnumerate}
+
+Test pass?\+: P\+A\+S\+S ~\newline
+~\newline
+~\newline
+
+
+~\newline
+ 
