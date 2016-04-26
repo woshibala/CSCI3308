@@ -56,9 +56,9 @@ See plan in Trello
 https://trello.com/projectcsci33081
 <br/>
 ##Repo organization<br/>
-All the code is in my_blog. If you want to run locally, cd into my_blog and enter "python manage.py runserver".
+All the code is in my_blog. If you want to run locally, cd into my_blog and enter "python manage.py runserver".<br/>
 Then you can test the website by going to "127.0.0.1:8000/heo/index" in your browser.<br/>
-We also deploy this website on heroku, you can goto "https://young-atoll-31732.herokuapp.com/heo/index/".
+We also deploy this website on heroku, you can goto https://young-atoll-31732.herokuapp.com/heo/index/ <br/>
 Learn how to test, see demo video https://drive.google.com/open?id=0Byb3uyj9U5uqNmF6NzE5RXMweWM <br/>
 
 
