@@ -2166,6 +2166,7 @@ Status API Training Shop Blog About
     <div id="menu">
       <ul class="toplinks">
         <li align="right"><a>Hello, {{username}}!</a></li>
+        <--li align="right"><a href="../logout">Logout</a></li>
         <li><a href="https://github.com/woshibala/team-project-for-csci3308" target='_blank'>About us</a></li>
         <li align="right"><a href="../add" target='_self' align="right">Need Help?</a></li>
       </ul>
@@ -2179,25 +2180,21 @@ Status API Training Shop Blog About
 </header>
 <section>
   <div class="container">
-    <ul class="docs-nav" id="menu-left">
-      <li><strong>Getting Started</strong></li>
-      <li><a href="#Theme_Info" class=" ">Theme Info</a></li>
-    <li><a href="#Features" class=" ">Features</a></li>
-      <li><a href="#Installation" class=" ">Installation</a></li>
-      <li class="separator"></li>
-      <li><strong>Customize Theme</strong></li>
-      <li><a href="#ShortCodes" class=" ">ShortCodes</a></li>
-      <li><a href="#Fixedd" class=" ">Fixed</a></li>     
-      <li class="separator"></li>
-
+   <ul class="docs-nav" id="menu-left">
+      <li><strong>Welcome to HEO</strong></li>
+      <li><a href="#Theme_Info" class=" ">HEO is a platform where everyone can get help and help others. </a></li>
+    
     </ul>
     <div class="docs-content">
-      <h2> Help Information</h2>
+      <h2> Help Information </h2>
+      <br/><br/>
       {% for post in post_list %}
       <p>
       <h3 id="Theme_Info">{{post.title}}</h3>
       <p> Created: {{post.date_time}}<br/> </p>
-      <span class="small_title"><i class="fa fa-check-square-o"></i>User: {{post.user}}</span>
+      {% load staticfiles %}
+      <img src="/{{post.image.url}}" alt="image"/>
+      <p><span class="small_title"><i class="fa fa-check-square-o"></i>User: {{post.username}}</span></p>
       <p>{{post.content}}</p>
       <input type="submit" name="submit" id="submit" value=" I WANT TO HELP"class="button button-glow button-border button-rounded button-primary" />
       </p>

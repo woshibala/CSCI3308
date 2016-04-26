@@ -2187,7 +2187,7 @@ Status API Training Shop Blog About
     <div id="menu">
       <ul class="toplinks">
         <li><a href="../index" target='_self'>Home</a></li>
-        <li><a>Hello, {{username}}</a></li>
+        <li><a>Hello, {{username}}!</a></li>
         <li><a href="https://github.com/woshibala/team-project-for-csci3308" target='_blank'>About us</a></li>
       </ul>
     </div>
@@ -2205,12 +2205,14 @@ Status API Training Shop Blog About
      
     </ul>
     <div class="docs-content">
-      <form  action="../add_return/" id = "aaa" method="get">{% csrf_token %}
+      <form  action="../add_return/" id = "aaa" method="post" enctype="multipart/form-data">{% csrf_token %}
             <p>           
             <input type="text" name="title" placeholder="title" class="button-rounded" />
             </p>
               
             <input type="text" name="category" placeholder="category" class="button-rounded" />
+
+            <input type="file" name="docfile" />
 
             <p>
             <input type="text" name="content" placeholder="Please discribe your difficulty here!" class="content button-rounded" />

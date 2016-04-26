@@ -1,5 +1,4 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django.utils import timezone
 
@@ -10,6 +9,7 @@ class Article(models.Model):
 	date_time = models.DateTimeField(default = timezone.now())
 	content = models.TextField(blank =True,null=True)
 	username = models.CharField(max_length = 100,default='SOME STRING')
+	image = models.ImageField(upload_to='photos', blank=True,null=True)
 
 	def __str__(self):
 		return self.title

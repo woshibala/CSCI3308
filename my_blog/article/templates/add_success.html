@@ -2187,7 +2187,7 @@ Status API Training Shop Blog About
     <div id="menu">
       <ul class="toplinks">
         <li><a href="../index" target='_self'>Home</a></li>
-        <li><a>Hello, {{username}}</a></li>
+        <li><a>Hello, {{username}}!</a></li>
         <li><a href="https://github.com/woshibala/team-project-for-csci3308" target='_blank'>About us</a></li>
       </ul>
     </div>
@@ -2205,15 +2205,18 @@ Status API Training Shop Blog About
      
     </ul>
     <div class="docs-content">
-      <form  action="../add_return/" id = "aaa" method="get">{% csrf_token %}
+      
       <p>
       <h3 id="Theme_Info">{{title}}</h3>
       <p> Created: {{datetime}}<br/> </p>
-      <span class="small_title"><i class="fa fa-check-square-o"></i>User: someuser</span>
+      {% load staticfiles %}
+      <img src="/{{url}}" alt="image"/>
+      
+      <p><span class="small_title"><i class="fa fa-check-square-o"></i>User: {{username}}</span></p>
       <p>{{content}}</p>
-      <input type="submit" name="submit" id="submit" value="Back to Home"class="button button-glow button-border button-rounded button-primary" />
+      <a href = "../back_home/" class="button button-glow button-border button-rounded button-primary" >back to home</a>
       </p>
-     </form>      
+         
      
 </section>
 <section class="vibrant centered">

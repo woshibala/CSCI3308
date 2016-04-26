@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_protect
 from article.models import Article,User
-from article.forms import SearchForm
+from article.forms import addForm
 import datetime
 # Create your views here.
 
@@ -47,21 +47,29 @@ def signup(request):
 	return render(request,"signup.html",{'state':""})
 
 def add(request):
-	return render_to_response("add.html")
+	username = request.COOKIES['name']
+	response = render(request,"add.html",{'username':username})
+	return response
 
 def add_return(request):
-	tit = request.GET['title']
-	cate = request.GET['category']
-	cont = request.GET['content']
-	#need cookie to identify user
-	#dt = datetime.datetime.now() default is now!
-	a = Article(title=tit,category=cate,content=cont)
+	img = request.FILES["docfile"]
+	username = request.COOKIES['name']
+	tit = request.POST['title']
+	cate = request.POST['category']
+	cont = request.POST['content']
+
+	#need cookie to identify 
+	#dt = datetime.datetime.now() default is now!'''
+	a = Article(title=tit,category=cate,content=cont,username=username,image=img)
 	a.save()
 	content = {
 	  'title':tit,
 	  'category':cate,
 	  'datetime':datetime.datetime.now(),
 	  'content': cont,
+	  'username':username,
+	  'url':a.image.url,
+
 	  #still need to add username here
 	}
 	return render(request,"add_success.html",content)
@@ -76,14 +84,21 @@ def signup_return(request):
 		uid = User.objects.count()
 		u = User(username=uname,email=e_mail,password=pwd,user_id=uid)
 		u.save()
-		content = {
-	 	 	'username':uname
-		}
-		return render(request,'index_login.html',content)
+		post_list = Article.objects.all()
+		request.session[uid] = True
+		response = render(request,'index_login.html',{"post_list":post_list,'username':uname})
+		response.set_cookie('name',uname)
+		return response
 	else:#every email can only signup once
 		return render(request,"signup.html",{'state': "User already exist!"})
 
-@csrf_protect
+def back_home(request):
+	username = request.COOKIES['name']
+	post_list = Article.objects.all()
+	return render(request,'index_login.html',{"post_list":post_list,'username':username})
+
+
+
 def login_return(request):
 	if User.objects.filter(email=request.GET['email']).count() == 0:
 		return render(request,"login.html",{'state':"User doesn't exist!"})
@@ -91,14 +106,24 @@ def login_return(request):
 		u = User.objects.get(email=request.GET['email'])	
 		if u.password == request.GET['password']:
 			#if info correct go to index
-			request.session['uid'] = u.id
+			request.session[u.id] = True
 			post_list = Article.objects.all()
-			return render(request,'index_login.html',{'username':u.username,"post_list":post_list})
+			request.session[u.id] = True
+			response = render(request,'index_login.html',{"post_list":post_list,'username':u.username})
+			response.set_cookie('name',u.username)
+			return response
 		else:
 			#if password incorrect return error message
 			content = 'Please enter the correct password!'
 			return render(request,"login.html",{'state':content})
 	else:#if find more than one user
 		return HttpResponse("More than one user found! Error!")
+
+def logout(request):
+	username = request.COOKIES['name']
+	post_list = Article.objects.all()   
+	response = render(request,"index.html",{"post_list":post_list})
+	response.delete_cookie('name')
+	return response
 
 
