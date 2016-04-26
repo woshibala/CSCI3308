@@ -62,5 +62,9 @@ We also deploy this website on heroku, you can goto https://young-atoll-31732.he
 Learn how to test, see Demo Video https://drive.google.com/open?id=0Byb3uyj9U5uqNmF6NzE5RXMweWM <br/><br/>
 ##Demo Video<br/>
 https://drive.google.com/open?id=0Byb3uyj9U5uqNmF6NzE5RXMweWM
+<br/>
+##Auto-doc<br/>
+We use Doxygen to generate the documentation<br/>
+https://github.com/woshibala/team-project-for-csci3308/blob/master/my_blog/article/html/index.html
 
 
